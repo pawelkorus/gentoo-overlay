@@ -26,6 +26,8 @@ RDEPEND="
 "
 
 src_prepare() {
+	default
+	
 	./bootstrap
 	cd ../pulseaudio-${PULSE_VER} || die
 	meson build -Ddaemon=false -Ddoxygen=false -Dgcov=false -Dtests=false -Ddatabase=simple
